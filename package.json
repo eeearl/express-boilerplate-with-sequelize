@@ -1,0 +1,23 @@
+{
+  "name": "kakeibo-middleware",
+  "version": "0.0.1",
+  "main": "./src/app.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "babel src -s -D -d dist",
+    "start": "npm run build && database=kakeibo db_name=**** db_password=**** node ./dist/app.js "
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "pg": "^7.4.3",
+    "sequelize": "^4.38.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1"
+  }
+}
